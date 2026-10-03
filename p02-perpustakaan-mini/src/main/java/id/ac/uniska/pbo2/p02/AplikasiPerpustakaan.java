@@ -9,6 +9,7 @@ package id.ac.uniska.pbo2.p02;
 public class AplikasiPerpustakaan {
 public static void main(String[] args) {
 Perpustakaan perpus = new Perpustakaan();
+   Koleksi x = new Koleksi("X01", "Uji", 2026);
 perpus.tambah(new Buku("B001", "Laskar Pelangi", 2005, "Andrea Hirata"));
 perpus.tambah(new Buku("B002", "Clean Code", 2008, "Robert C. Martin"));
 perpus.tambah(new Majalah("M001", "Majalah Teknologi Kita", 2026, "Agustus"));
