@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package id.ac.uniska.pbo2.p02;
+import java.util.List;
 /**
 * Menjalankan skenario peminjaman dan pengembalian pada Perpustakaan Mini.
 */
@@ -12,6 +13,7 @@ Perpustakaan perpus = new Perpustakaan();
 perpus.tambah(new Buku("B001", "Laskar Pelangi", 2005, "Andrea Hirata"));
 perpus.tambah(new Buku("B002", "Clean Code", 2008, "Robert C. Martin"));
 perpus.tambah(new Majalah("M001", "Majalah Teknologi Kita", 2026, "Agustus"));
+perpus.tambah(new Skripsi("S001", "Sistem Informasi Akademik", 2024, "M. Hafiz ILmi", "Teknik Informatika"));
 Anggota siti = new Anggota("2410010123", "Siti Rahmah");
 Anggota budi = new Anggota("2410010456", "Budi Santoso");
 tampilkanDaftar(perpus);
@@ -26,6 +28,14 @@ cetakKembali(perpus, "M001", 3);
 System.out.println();
 System.out.println("Koleksi tersedia: " + perpus.jumlahTersedia()
 + " dari " + perpus.getDaftarKoleksi().size());
+System.out.println();
+List<Koleksi> hasil = perpus.cariJudul("code");
+System.out.println("Hasil pencarian \"code\": " + hasil.size() + " koleksi");
+for (Koleksi k : hasil) {
+System.out.println(k);
+}
+System.out.println();
+cetakPinjam(perpus, "S001", siti);
 }
 private static void tampilkanDaftar(Perpustakaan perpus) {
 System.out.println("=== Daftar Koleksi ===");
