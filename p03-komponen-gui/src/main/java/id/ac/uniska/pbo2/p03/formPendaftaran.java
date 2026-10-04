@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Ideapad Slim 1
+ * @author Hafiz
  */
 public class formPendaftaran extends javax.swing.JFrame {
     
