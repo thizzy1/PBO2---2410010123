@@ -2,7 +2,7 @@
 
 ### Tahap 1: Sketsa
 
-![Sketsa Form Anggota Perpustakaan](foto-tugas/sketsa.jpg)
+![Sketsa Form Anggota Perpustakaan](p04-layout-manager/foto-tugas/sketsa.jpg)
 
 *Gambar 1. Sketsa FormAnggotaPerpustakaan beserta nama layout di setiap bagian*
 
