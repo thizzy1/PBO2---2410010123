@@ -6,6 +6,12 @@
 
 ![Foto konfirmasi keluar ](dialogKonfirmasiKeluar.png)
 
+
+
+## file form dan java anggota perpustakaan saya copy dan masukan juga ke folder p05 karena bingung linknya apakah dari link sebelumnya atau yang baru, jadi saya masukkan saja ke yang baru
+
+
+
 ## Praktikum 2: Tabel Pengamatan (PengamatEvent)
 
 | No | Tindakan | Event yang tercatat |
