@@ -103,6 +103,7 @@
             <Component class="javax.swing.JTextField" name="npmField">
               <Events>
                 <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="npmFieldFocusLost"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="npmFieldActionPerformed"/>
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="npmFieldKeyTyped"/>
               </Events>
               <Constraints>
@@ -123,6 +124,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="namaLabel">
               <Properties>
+                <Property name="displayedMnemonic" type="int" value="78"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="namaField"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nama Lengkap"/>
               </Properties>
               <Constraints>
@@ -153,6 +158,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="prodiLabel">
               <Properties>
+                <Property name="displayedMnemonic" type="int" value="82"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="prodiCombo"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Program Studi"/>
               </Properties>
               <Constraints>
@@ -196,6 +205,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="jenisLabel">
               <Properties>
+                <Property name="displayedMnemonic" type="int" value="74"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="jenisPanel"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Jenis anggota"/>
               </Properties>
               <Constraints>
@@ -254,6 +267,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="emailLabel">
               <Properties>
+                <Property name="displayedMnemonic" type="int" value="69"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="emailField"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Email"/>
               </Properties>
               <Constraints>
@@ -284,6 +301,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="hpLabel">
               <Properties>
+                <Property name="displayedMnemonic" type="int" value="72"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="hpField"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Nomor HP"/>
               </Properties>
               <Constraints>
@@ -314,6 +335,10 @@
             </Component>
             <Component class="javax.swing.JLabel" name="alamatLabel">
               <Properties>
+                <Property name="displayedMnemonic" type="int" value="76"/>
+                <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="alamatArea"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Alamat"/>
               </Properties>
               <Constraints>
@@ -344,6 +369,7 @@
             </Container>
             <Component class="javax.swing.JCheckBox" name="setujuCheck">
               <Properties>
+                <Property name="mnemonic" type="int" value="84"/>
                 <Property name="text" type="java.lang.String" value="Saya Setuju Dengan Tata Tertib Perpustakaan"/>
               </Properties>
               <Events>

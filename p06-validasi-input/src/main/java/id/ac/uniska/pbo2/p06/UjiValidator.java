@@ -1,11 +1,10 @@
 package id.ac.uniska.pbo2.p06;
 
-/**@author hafiz
-
-
 /**
  * Menguji aturan Validator tanpa GUI dengan beberapa contoh masukan.
  * Pada Pertemuan 13 pengujian seperti ini ditulis ulang dengan JUnit.
+ *
+ * @author hafiz
  */
 public class UjiValidator {
 
@@ -26,6 +25,8 @@ public class UjiValidator {
         cek("NPM berisi huruf", Validator.npm("24100101ab"), false);
         cek("NPM benar", Validator.npm("2410010123"), true);
         cek("Nama terlalu pendek", Validator.nama("Al"), false);
+        cek("Nama berisi angka", Validator.nama("Siti123"), false);
+        cek("Nama angka di tengah", Validator.nama("Bu2di"), false);
         cek("Nama benar", Validator.nama("Siti Rahmah"), true);
         cek("Email tanpa domain", Validator.email("siti@"), false);
         cek("Email benar", Validator.email("siti.rahmah@uniska-bjm.ac.id"), true);

@@ -132,6 +132,7 @@ public class FormAnggota extends javax.swing.JFrame {
                 npmFieldFocusLost(evt);
             }
         });
+        npmField.addActionListener(this::npmFieldActionPerformed);
         npmField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 npmFieldKeyTyped(evt);
@@ -153,6 +154,8 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 0);
         formPanel.add(npmPesanLabel, gridBagConstraints);
 
+        namaLabel.setDisplayedMnemonic('N');
+        namaLabel.setLabelFor(namaField);
         namaLabel.setText("Nama Lengkap");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -179,6 +182,8 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 0);
         formPanel.add(namaPesanLabel, gridBagConstraints);
 
+        prodiLabel.setDisplayedMnemonic('R');
+        prodiLabel.setLabelFor(prodiCombo);
         prodiLabel.setText("Program Studi");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -202,6 +207,8 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 0);
         formPanel.add(prodiPesanLabel, gridBagConstraints);
 
+        jenisLabel.setDisplayedMnemonic('J');
+        jenisLabel.setLabelFor(jenisPanel);
         jenisLabel.setText("Jenis anggota");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -237,6 +244,8 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         formPanel.add(kontakLabel, gridBagConstraints);
 
+        emailLabel.setDisplayedMnemonic('E');
+        emailLabel.setLabelFor(emailField);
         emailLabel.setText("Email");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -263,6 +272,8 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 2, 0);
         formPanel.add(emailPesanLabel, gridBagConstraints);
 
+        hpLabel.setDisplayedMnemonic('H');
+        hpLabel.setLabelFor(hpField);
         hpLabel.setText("Nomor HP");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -289,6 +300,8 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         formPanel.add(hpField, gridBagConstraints);
 
+        alamatLabel.setDisplayedMnemonic('L');
+        alamatLabel.setLabelFor(alamatArea);
         alamatLabel.setText("Alamat");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -307,6 +320,7 @@ public class FormAnggota extends javax.swing.JFrame {
         gridBagConstraints.weightx = 1.0;
         formPanel.add(alamatScroll, gridBagConstraints);
 
+        setujuCheck.setMnemonic('T');
         setujuCheck.setText("Saya Setuju Dengan Tata Tertib Perpustakaan");
         setujuCheck.addItemListener(this::setujuCheckItemStateChanged);
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -397,6 +411,10 @@ public class FormAnggota extends javax.swing.JFrame {
         daftar();
     }//GEN-LAST:event_daftarButtonActionPerformed
 
+    private void npmFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_npmFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_npmFieldActionPerformed
+
     private boolean periksaNpm() {
         return tandai(npmField, npmPesanLabel, Validator.npm(npmField.getText()));
     }
@@ -405,7 +423,7 @@ public class FormAnggota extends javax.swing.JFrame {
         return tandai(namaField, namaPesanLabel, Validator.nama(namaField.getText()));
     }
 
-    private boolean periksaProdi() {
+    private boolean periksaProdi() {    
         String kesalahan = null;
         if (prodiCombo.getSelectedIndex() == 0) {
             kesalahan = "Pilih salah satu program studi";
