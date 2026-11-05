@@ -8,7 +8,7 @@ package id.ac.uniska.pbo2.p08.uts;
  *
  * @author Ideapad Slim 1
  */
-// M Hafiz Ilmi 2410010123
+// Nama : M Hafiz Ilmi NPM : 2410010123
 public class RekapNilaiMahasiswa extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(RekapNilaiMahasiswa.class.getName());

@@ -8,7 +8,7 @@ package id.ac.uniska.pbo2.p08.uts;
  *
  * @author Ideapad Slim 1
  */
-// NPM 
+//Nama : M Hafiz Ilmi NPM : 2410010123
 public class NilaiMahasiswa {
 
     public class NilaiMahasiswa {

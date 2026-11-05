@@ -13,7 +13,7 @@ import java.util.List;
  * @author Ideapad Slim 1
  */
 
-// M Hafiz Ilmi 2410010123
+//Nama : M Hafiz Ilmi NPM : 2410010123
 public class TabelModelNilai {
 
     public class TabelModelNilai extends AbstractTableModel {
