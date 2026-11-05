@@ -6,7 +6,7 @@ package id.ac.uniska.pbo2.p07;
 
 /**
  *
- * @author Ideapad Slim 1
+ * @author hafiz
  */
 public class P07TabelDanMenu {
 
