@@ -1,77 +1,83 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package id.ac.uniska.pbo2.p08.uts;
+// Nama : M Hafiz Ilmi
+// NPM  : 2410010123
+package id.ac.uniska.pbo2.uts;
+
+import java.util.Locale;
 
 /**
+ * Class data: satu baris nilai mahasiswa beserta perhitungan nilai akhir
+ * dan huruf mutu.
  *
- * @author Ideapad Slim 1
+ * @author M Hafiz Ilmi
  */
-//Nama : M Hafiz Ilmi NPM : 2410010123
 public class NilaiMahasiswa {
 
-    public class NilaiMahasiswa {
+    /** Format angka Indonesia: koma sebagai pemisah desimal (82,50). */
+    public static final Locale LOKAL = Locale.forLanguageTag("id-ID");
 
-        private String npm;
-        private String nama;
-        private int tugas;
-        private int uts;
-        private int uas;
+    private final String npm;
+    private final String nama;
+    private final int tugas;
+    private final int uts;
+    private final int uas;
 
-        // Constructor
-        public NilaiMahasiswa(String npm, String nama, int tugas, int uts, int uas) {
-            this.npm = npm;
-            this.nama = nama;
-            this.tugas = tugas;
-            this.uts = uts;
-            this.uas = uas;
+    public NilaiMahasiswa(String npm, String nama, int tugas, int uts, int uas) {
+        this.npm = npm;
+        this.nama = nama;
+        this.tugas = tugas;
+        this.uts = uts;
+        this.uas = uas;
+    }
+
+    /**
+     * Nilai akhir = 30% tugas + 30% UTS + 40% UAS. Dihitung dengan bilangan
+     * bulat lalu dibagi 10 agar tidak terkena kesalahan pembulatan desimal
+     * pada batas huruf mutu (misalnya tepat 80,0).
+     */
+    public double getNilaiAkhir() {
+        return (3 * tugas + 3 * uts + 4 * uas) / 10.0;
+    }
+
+    /** Nilai akhir dengan dua angka di belakang koma, misalnya "82,50". */
+    public String getNilaiAkhirTeks() {
+        return String.format(LOKAL, "%.2f", getNilaiAkhir());
+    }
+
+    public String getHurufMutu() {
+        double akhir = getNilaiAkhir();
+        if (akhir >= 80) {
+            return "A";
+        } else if (akhir >= 75) {
+            return "B+";
+        } else if (akhir >= 70) {
+            return "B";
+        } else if (akhir >= 65) {
+            return "C+";
+        } else if (akhir >= 60) {
+            return "C";
+        } else if (akhir >= 40) {
+            return "D";
         }
+        return "E";
+    }
 
-        // Method perhitungan nilai akhir sesuai bobot spesifikasi
-        public double getNilaiAkhir() {
-            return (0.30 * tugas) + (0.30 * uts) + (0.40 * uas);
-        }
+    public String getNpm() {
+        return npm;
+    }
 
-        // Method penentuan huruf mutu berdasarkan nilai akhir
-        public String getHurufMutu() {
-            double akhir = getNilaiAkhir();
-            if (akhir >= 80 && akhir <= 100) {
-                return "A";
-            } else if (akhir >= 75 && akhir < 80) {
-                return "B+";
-            } else if (akhir >= 70 && akhir < 75) {
-                return "B";
-            } else if (akhir >= 65 && akhir < 70) {
-                return "C+";
-            } else if (akhir >= 60 && akhir < 65) {
-                return "C";
-            } else if (akhir >= 40 && akhir < 60) {
-                return "D";
-            } else {
-                return "E";
-            }
-        }
+    public String getNama() {
+        return nama;
+    }
 
-        // Getters untuk mengambil data ke tabel
-        public String getNpm() {
-            return npm;
-        }
+    public int getTugas() {
+        return tugas;
+    }
 
-        public String getNama() {
-            return nama;
-        }
+    public int getUts() {
+        return uts;
+    }
 
-        public int getTugas() {
-            return tugas;
-        }
-
-        public int getUts() {
-            return uts;
-        }
-
-        public int getUas() {
-            return uas;
-        }
+    public int getUas() {
+        return uas;
     }
 }
